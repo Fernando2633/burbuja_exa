@@ -1,0 +1,16 @@
+def burbuja(lista):
+    n = len(lista)  # Obtiene la longitud de la lista
+    
+    for i in range(n):  # Itera a través de todos los elementos de la lista
+        for j in range(0, n-i-1):  # Itera a través de los elementos no ordenados de la lista
+            if lista[j] > lista[j+1]:  # Compara dos elementos adyacentes
+                # Intercambia los elementos si están en el orden incorrecto
+                lista[j], lista[j+1] = lista[j+1], lista[j]
+
+# Ejemplo de uso
+mi_lista = [100, 600, 500, 200, 400, 300, 10]
+burbuja(mi_lista)  # Llama a la función burbuja para ordenar la lista
+
+print("La lista ordenada es:")
+for elemento in mi_lista:
+    print(elemento, end=" ")  # Imprime la lista ordenada en la consola
